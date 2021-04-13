@@ -30,10 +30,7 @@ while (true) {
    //for (i=0; i<N; i++)
     {
         if (H>= 2 && W>=2)
-        {m = H/2 ;
-        n = W/2;
-        H = m;
-        W = n;
+        {
         console.error('hauteur ' + H);
         console.error('largeur ' + W);
         }
