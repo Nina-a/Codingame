@@ -26,48 +26,54 @@
      console.error("type_case " + type_case);
      var Y: number;
      var X: number;
-     switch(type_case){
+     switch (type_case) {
          case 1:
-             X = XI;
-             Y = YI + 1;
-         break
-         case 2:
-             Y = YI;
-             POS === "LEFT" ?  X = XI + 1 : X = XI - 1;
-         break;
          case 3:
-             X = XI;
-             Y = YI +1;
-         break;
-         case 4:
-             if (POS === "TOP"){
-                 X = XI - 1;
-                 Y = YI; 
-             }else{
-                 X = XI;
-                 Y = YI + 1;
-             }
-         break;
          case 7:
-                 X = XI;
-                 Y = YI + 1;
-         break;
          case 8:
-             X = XI;
-             Y = YI + 1;
-         break;
-         case 11:
-             X = XI + 1;
-             Y = YI;
-         break;
-         case 10:
-             X = XI - 1;
-             Y= YI;
-         break;
+         case 9:
+         case 12:
          case 13:
              X = XI;
              Y = YI + 1;
-         break;
+             break;
+ 
+         case 2:
+         case 6:
+             Y = YI;
+             X = POS === "LEFT" ? XI + 1 : XI - 1;
+             break;
+ 
+         case 4:
+             if (POS === "TOP") {
+                 X = XI - 1;
+                 Y = YI;
+             } else {
+                 X = XI;
+                 Y = YI + 1;
+             }
+             break;
+ 
+         case 5:
+             if (POS === "TOP") {
+                 X = XI + 1;
+                 Y = YI;
+             } else {
+                 X = XI;
+                 Y = YI + 1;
+             }
+             break;
+ 
+         case 10:
+             X = XI - 1;
+             Y = YI;
+             break;
+ 
+         case 11:
+             X = XI + 1;
+             Y = YI;
+             break;
+             
      }
  
      // One line containing the X Y coordinates of the room in which you believe Indy will be on the next turn.
