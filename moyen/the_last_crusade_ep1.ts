@@ -12,7 +12,6 @@
      var LINE: string = readline(); // represents a line in the grid and contains W integers. Each integer represents one room of a given type.
      console.error("line " + LINE);
      let plop = LINE.split(" ");
-     console.error("plop "+plop);
      parcours.push(plop);
  }
  
@@ -20,38 +19,54 @@
  // game loop
  while (true) {
      var inputs: string[] = readline().split(' ');
-     
      const XI: number = parseInt(inputs[0]);
      const YI: number = parseInt(inputs[1]);
      const POS: string = inputs[2];
      let type_case = parseInt(parcours[YI][XI]);
      console.error("type_case " + type_case);
-     console.error(XI,YI,POS);
+     var Y: number;
+     var X: number;
      switch(type_case){
-        case 3:
-             var X = XI;
-             var Y = YI +1;
-         break;
-         case 11:
-             var X = XI + 1;
-             var Y = YI;
-         break;
+         case 1:
+             X = XI;
+             Y = YI + 1;
+         break
          case 2:
-             if (POS === "LEFT"){
-                 var X = XI + 1;
-                 var Y = YI; 
+             Y = YI;
+             POS === "LEFT" ?  X = XI + 1 : X = XI - 1;
+         break;
+         case 3:
+             X = XI;
+             Y = YI +1;
+         break;
+         case 4:
+             if (POS === "TOP"){
+                 X = XI - 1;
+                 Y = YI; 
              }else{
-                 var X =XI - 1;
-                 var Y = YI;
+                 X = XI;
+                 Y = YI + 1;
              }
          break;
+         case 7:
+                 X = XI;
+                 Y = YI + 1;
+         break;
+         case 8:
+             X = XI;
+             Y = YI + 1;
+         break;
+         case 11:
+             X = XI + 1;
+             Y = YI;
+         break;
          case 10:
-             var X = XI - 1;
-             var Y= YI;
+             X = XI - 1;
+             Y= YI;
          break;
          case 13:
-             var X = XI;
-             var Y = YI + 1;
+             X = XI;
+             Y = YI + 1;
          break;
      }
  
