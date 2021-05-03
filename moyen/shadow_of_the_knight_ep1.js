@@ -67,4 +67,3 @@
      // the location of the next window Batman should jump to.
      console.log(X, Y);
  }
- 
